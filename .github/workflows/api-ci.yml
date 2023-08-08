@@ -21,7 +21,6 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-          cache-dependency-path: ./qr-generator-vue-3/package-lock.json
       - name: install
         shell: bash
         run: npm ci
