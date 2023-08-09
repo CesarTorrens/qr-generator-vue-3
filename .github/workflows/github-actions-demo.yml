@@ -1,4 +1,4 @@
-name: API CI
+name: QR GENERATOR CI
 #on: [push]
 on:
   push:
@@ -8,6 +8,7 @@ on:
 
 defaults:
   run:
+    shell: bash
     working-directory: ./qr-generator-vue-3
 
 jobs:
@@ -22,12 +23,6 @@ jobs:
           node-version: 18
           cache: 'npm'
       - name: install
-        shell: bash --noprofile --norc -eo pipefail {0}
         run: npm ci
       - name: run unit test
-        shell: bash --noprofile --norc -eo pipefail {0}
         run: npm run test:unit
-
-
-
- 
