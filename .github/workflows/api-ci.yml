@@ -22,10 +22,10 @@ jobs:
           node-version: 18
           cache: 'npm'
       - name: install
-        shell: bash
+        shell: bash --noprofile --norc -eo pipefail {0}
         run: npm ci
       - name: run unit test
-        shell: bash
+        shell: bash --noprofile --norc -eo pipefail {0}
         run: npm run test:unit
 
 
