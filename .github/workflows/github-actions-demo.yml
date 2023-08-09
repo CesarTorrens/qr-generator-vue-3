@@ -3,13 +3,13 @@ name: QR GENERATOR CI
 on:
   push:
     paths:
-      - "./qr-generator-vue-3/**"
-      - ".github/workflows/api-ci.yml"
+      - "../qr-generator-vue-3/**"
+      - "./.github/workflows/github-actions-demo.yml"
 
 defaults:
   run:
     shell: bash
-    working-directory: ./qr-generator-vue-3
+    working-directory: ../qr-generator-vue-3
 
 jobs:
   unit-test:
